@@ -27,18 +27,18 @@ jobs:
       run: cd birdnet-ui/birdnet-ui; npm ci
 
     - name: Build
-      run: npm run build -- --prod
+      run: cd birdnet-ui/birdnet-ui; npm run build -- --prod
 
     - name: Lint
-      run: npm run lint
+      run: cd birdnet-ui/birdnet-ui; npm run lint
 
     - name: Test
-      run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      run: cd birdnet-ui/birdnet-ui; npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
-        folder: dist/your-project-name# On push run build, lint and tests and deploy to github pages
+        folder: birdnet-ui/birdnet-ui/dist/birdnet-ui/browser
 
