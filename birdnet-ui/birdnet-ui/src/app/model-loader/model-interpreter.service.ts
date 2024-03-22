@@ -2,12 +2,17 @@ import { Injectable } from '@angular/core';
 // import labels.json file from assets folder
 import labels from '../../assets/labels.json';
 
+export interface InferenceResult {
+  name: string;
+  score: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ModelInterpreterService {
 
-  public interpretOutput(output: Float32Array): {name: string, score: number}[] {
+  public interpretOutput(output: Float32Array): InferenceResult[] {
     // Get the top 5 results from the output
 
     // Create an array of indices from 0 to 99
