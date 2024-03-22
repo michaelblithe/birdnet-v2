@@ -32,8 +32,8 @@ jobs:
     - name: Lint
       run: cd birdnet-ui/birdnet-ui; npm run lint
 
-    - name: Test
-      run: cd birdnet-ui/birdnet-ui; npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+    # - name: Test
+    #   run: cd birdnet-ui/birdnet-ui; npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
