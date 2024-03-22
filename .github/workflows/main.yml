@@ -27,7 +27,7 @@ jobs:
       run: cd birdnet-ui/birdnet-ui; npm ci
 
     - name: Build
-      run: cd birdnet-ui/birdnet-ui; npm run build -- --prod
+      run: cd birdnet-ui/birdnet-ui; npm run build  --configuration=production
 
     - name: Lint
       run: cd birdnet-ui/birdnet-ui; npm run lint
