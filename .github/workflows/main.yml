@@ -42,3 +42,6 @@ jobs:
         branch: gh-pages
         folder: birdnet-ui/birdnet-ui/dist/birdnet-ui/browser
 
+permissions:
+  contents: write
+
